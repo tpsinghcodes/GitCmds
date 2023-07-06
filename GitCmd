@@ -1,0 +1,44 @@
+git --version
+git config -l [ check current users detail ]
+git config --global user.email "desiteckofficial@gmail.com" [set email]
+git config --global user.name "desiteck" [set username]
+git config --global init.defaultBranch main
+git init [ initilze init ]
+git status [ current status of Git config in folder ]
+git add <filename> or git add . [stage file]
+git commit -m "Message"
+git checkout <branch name> [switch to branch]
+git checkout -b <branch name>  [create and switch to new branch]
+git branch [check branch]
+git branch <branch name> [create new branch]
+git branch -m <oldname> <newname> [Rename Local Branch]
+git branch -d <branch name> [delete branch]
+git branch --delete <branch name> [delete branch]
+git branch --D <branch name> [delete branch]
+git merge <branch name> [merge branch to current branch]
+git remote -v [check current remote repo]
+
+git remote add origin<Origin name can be change> https://github.com/rahuls26a/<reposname>.git
+For SSH
+git remote add origin https://github.com/rahuls26a/githcmd.git
+
+git remote remove origin
+git branch -M main [ Force Current name of branch to main ]
+git push -u origin <this must be same origin as above> main [ Push Data from local ] [ force ] --force
+OR
+git pull origin <branch> --- Pull from Remote.
+
+Other
+===============================
+git log [check last commit]
+git checkout <commit hash> [go to commit stage]
+
+
+GitUpload Steps
+=================================
+*	Initilize Git by config username and email as mentioned above
+*	git init
+*	git add .
+*	git commit -m "This is comment"
+*	git remote add origin git@github.com:rauls26a/gitcmd.git
+*	git push -u origin main
