@@ -1,32 +1,36 @@
+Initial Configuration
+==============================
 git --version
-git config -l [ check current users detail ]
-git config --global user.email "desiteckofficial@gmail.com" [set email]
-git config --global user.name "desiteck" [set username]
-git config --global init.defaultBranch main
+git config -l [ check current users details if any ]
+git config --global user.email "youremailid@gmail.com" [set email]
+git config --global user.name "yourusername" [set username]
+git config --global init.defaultBranch main [default is master so change it main]
 git init [ initilze init ]
-git status [ current status of Git config in folder ]
+
+git remote add origin <Remote_Repo_Name> [ssh<key> to http]
+git remote remove origin [If want to remove entry]
+
+else
+git clone -b <Branch_name> <Repo_URL> [Clone a public repo to your local system]
+git branch <branch_name> [Create new branch]
+git checkout <branch_name> [switch to branch]
+git checkout -b <branch_name>  [create and switch to new branch]
+git push -u origin <branch_name> [push local branch to remote repo]
+or
+git pull origin <branch_name> [If you want to merge remote change to current branch]
+
+git delete -d <branch_name> [delete branch]
+git push origin --delete <branch_name> [for remote delete]
+
+
+git status
+git status [ current status of Git staging area ]
 git add <filename> or git add . [stage file]
-git commit -m "Message"
-git checkout <branch name> [switch to branch]
-git checkout -b <branch name>  [create and switch to new branch]
-git branch [check branch]
-git branch <branch name> [create new branch]
-git branch -m <oldname> <newname> [Rename Local Branch]
-git branch -d <branch name> [delete branch]
-git branch --delete <branch name> [delete branch]
-git branch --D <branch name> [delete branch]
-git merge <branch name> [merge branch to current branch]
-git remote -v [check current remote repo]
-
-git remote add origin<Origin name can be change> https://github.com/rahuls26a/<reposname>.git
-For SSH
-git remote add origin https://github.com/rahuls26a/githcmd.git
-
-git remote remove origin
-git branch -M main [ Force Current name of branch to main ]
-git push -u origin <this must be same origin as above> main [ Push Data from local ] [ force ] --force
-OR
-git pull origin <branch> --- Pull from Remote.
+git rm file.txt
+git commit -m "Message" [commit change a create unique commit id]
+git commit -am "Commit message" [add more commit]
+git commit -amend [Change in last commit message]
+git merge <branch_name> [merge branch to current branch]
 
 Other
 ===============================
@@ -42,3 +46,9 @@ GitUpload Steps
 *	git commit -m "This is comment"
 *	git remote add origin git@github.com:rauls26a/gitcmd.git
 *	git push -u origin main
+
+SSH KEY
+=================================
+ssh-keygen -t ed25519 -C "your_email@example.com" [ Generate SSH Key]
+Add ssh Key in Github manually 
+ssh -T git@github.com [ Check if key is valid or installed properly]
