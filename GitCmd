@@ -1,11 +1,12 @@
 Initial Configuration
 ==============================
 git --version
+git init [ initilze init ]
 git config -l [ check current users details if any ]
 git config --global user.email "youremailid@gmail.com" [set email]
 git config --global user.name "yourusername" [set username]
 git config --global init.defaultBranch main [default is master so change it main]
-git init [ initilze init ]
+
 
 git remote add origin <Remote_Repo_Name> [ssh<key> to http]
 git remote remove origin [If want to remove entry]
