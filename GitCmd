@@ -53,3 +53,11 @@ SSH KEY
 ssh-keygen -t ed25519 -C "your_email@example.com" [ Generate SSH Key]
 Add ssh Key in Github manually 
 ssh -T git@github.com [ Check if key is valid or installed properly]
+
+
+Pull Complete Project with all Branches
+=================================
+use remote projects with all branches
+git clone <reponame> <destination>
+git fetch --all
+git branch -a
